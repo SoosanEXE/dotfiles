@@ -85,6 +85,7 @@
         Plug 'ryanoasis/vim-devicons'
         Plug 'ghifarit53/tokyonight-vim'
         Plug 'greyblake/vim-preview'
+        Plug 'joshdick/onedark.vim'
     call plug#end()
 "}}}
 "NERD TREE CONFIG {{{
@@ -134,7 +135,6 @@
 "}}}
 "THEME AND AIRLINE{{{
     set background=dark
-    let g:tokyonight_style = 'night'
     colorscheme tokyonight
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'default'
@@ -194,7 +194,8 @@
 "GOYO CONFIG{{{
     nmap  <silent><leader>\ :Goyo<CR>
 "}}}
-    " replace selected with yanked stuff
+
+" replace selected with yanked stuff
     vnoremap <leader>p "_dp
     "space vr to open vimrc and space vs to source vimrc
     nnoremap <silent><leader>vr :e ~/.vimrc<CR>
