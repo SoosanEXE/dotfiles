@@ -21,27 +21,15 @@
     set spelllang=en_us
     set mouse=a
     set signcolumn=number
-    "set termguicolors
-    if(has("termguicolors"))
-        set termguicolors
-    endif
-    set hidden
-    set encoding=utf-8
-    set wildmode=longest,list,full
-    set belloff=all
+    set termguicolors
+    set hidden 
+    set encoding=utf-8 
+    set wildmode=longest,list,full 
+    set belloff=all 
     let mapleader= " "
     set foldenable
     set foldmethod=marker
     set foldmarker={{{,}}}
-"}}}
-"WSL YANK SUPPORT {{{
-    let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
-    if executable(s:clip)
-        augroup WSLYank
-            autocmd!
-            autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-        augroup END
-    endif
 "}}}
 "KEEP CENTERED {{{
     nnoremap n nzzzv
@@ -135,7 +123,7 @@
 "}}}
 "THEME AND AIRLINE{{{
     set background=dark
-    colorscheme tokyonight
+    colorscheme gruvbox
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'default'
     let g:airline_exclude_preview = 1
@@ -194,8 +182,17 @@
 "GOYO CONFIG{{{
     nmap  <silent><leader>\ :Goyo<CR>
 "}}}
-
-" replace selected with yanked stuff
+"TMUX CONF{{{
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+"}}}
+"CLIPBOARD{{{
+    vnoremap <silent><leader>y :%w !xclip -i -sel c <CR><CR>
+"}}}
+"" replace selected with yanked stuff
     vnoremap <leader>p "_dp
     "space vr to open vimrc and space vs to source vimrc
     nnoremap <silent><leader>vr :e ~/.vimrc<CR>
