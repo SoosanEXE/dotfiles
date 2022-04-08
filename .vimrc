@@ -71,9 +71,9 @@
         Plug 'junegunn/goyo.vim'
         Plug 'voldikss/vim-floaterm'
         Plug 'ryanoasis/vim-devicons'
-        Plug 'ghifarit53/tokyonight-vim'
         Plug 'greyblake/vim-preview'
-        Plug 'joshdick/onedark.vim'
+        Plug 'romgrk/doom-one.vim'
+        Plug 'dracula/vim', { 'as': 'dracula' }
     call plug#end()
 "}}}
 "NERD TREE CONFIG {{{
@@ -123,7 +123,7 @@
 "}}}
 "THEME AND AIRLINE{{{
     set background=dark
-    colorscheme gruvbox
+    colorscheme dracula
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'default'
     let g:airline_exclude_preview = 1
@@ -200,5 +200,4 @@ endif
     "remap Y to yanking till end of line
     nnoremap Y y$
     "open terminal with <space>t
-    nnoremap <leader>t :FloatermToggle<CR>
-
+    nnoremap <silent><leader>t :FloatermToggle<CR>
