@@ -116,18 +116,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-alias ls="lsd"
+alias zshconfig="vim ~/.zshrc"
+alias fishconfig="vim ~/.config/fish/config.fish"
 alias bashconfig='vim ~/.bashrc'
-alias cat="batcat"
+alias alaconfig="vim ~/.config/alacritty/alacritty.yml"
+alias v="vim"
+alias ls="lsd"
+alias cat="bat"
 alias :q="exit"
 alias v="vim"
 alias vi="vim"
+alias spotify="flatpak run com.spotify.Client"
 alias c="clear"
-alias xgraph="/mnt/c/users/sudha/dev/cnn/sim/xgraph/bin/xgraph"
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptupd='sudo apt update'
-alias aptupg='sudo apt upgrade'
 alias .1='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
@@ -135,5 +135,26 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias .6='cd ../../../../../..'
 alias mkdir='mkdir -pv'
+alias sozsh='source ~/.zshrc'
+alias sofish="source ~/.config/fish/config.fish"
+alias gitpat='cat ~/dev/PAT/git.txt'
+alias dev='cd ~/dev/; v'
+alias devjava='cd ~/dev/java/; v'
+alias finddev='cd ~/dev/; vim (fzf -m)'
+alias tmuxconf='v ~/.tmux.conf'
 
-cd /mnt/c/Users/sudha/DEV/
+
+# Pacman aliases
+alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
+alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
+alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
+alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
+alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # remove orphaned packages
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
