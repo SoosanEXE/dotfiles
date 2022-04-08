@@ -1,10 +1,10 @@
 # Use powerline
 USE_POWERLINE="true"
-# Source manjaro-zsh-configuration
+## Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
-# Use manjaro zsh prompt
+## Use manjaro zsh prompt
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
@@ -33,3 +33,9 @@ alias dev='cd ~/dev/; v'
 alias devjava='cd ~/dev/java/; v'
 alias finddev='cd ~/dev/; vim $(fzf -m)'
 alias tmuxconf='v ~/.tmux.conf'
+
+
+alias vimintro='v ~/dev/uhabits/uhabits-android/src/main/java/org/momentum/uhabits/activities/intro/IntroActivity.kt'
+alias vimcore='~/dev/uhabits/uhabits-core/src/commonMain/; v ./' 
+alias vimcolordate='~/dev/uhabits/uhabits-android/src/main/java/com/android/; v ./' 
+
