@@ -1,2 +1,8 @@
 # dotfiles
-Config files for zsh, vim and tmux
+Config files for
+ - fish
+ - alacritty
+ - vim
+ - zsh
+ - bash
+ - tmux
