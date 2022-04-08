@@ -33,9 +33,3 @@ alias dev='cd ~/dev/; v'
 alias devjava='cd ~/dev/java/; v'
 alias finddev='cd ~/dev/; vim $(fzf -m)'
 alias tmuxconf='v ~/.tmux.conf'
-
-
-alias vimintro='v ~/dev/uhabits/uhabits-android/src/main/java/org/momentum/uhabits/activities/intro/IntroActivity.kt'
-alias vimcore='~/dev/uhabits/uhabits-core/src/commonMain/; v ./' 
-alias vimcolordate='~/dev/uhabits/uhabits-android/src/main/java/com/android/; v ./' 
-
