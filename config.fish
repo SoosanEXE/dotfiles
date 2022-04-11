@@ -21,7 +21,7 @@ alias :q="exit"
 alias v="vim"
 alias vi="vim"
 alias spotify="flatpak run com.spotify.Client"
-alias c="clear"
+alias c="clear; figlet soosan -f slant | lolcat"
 alias .1='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
@@ -52,3 +52,11 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # remove orphaned packages
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+
+
+#shenanigans
+figlet -f slant soosan | lolcat
+alias termclock='watch -n1 "date '+%D%n%T' | figlet -k"'
+
+#spotify
+alias spt='sh ~/scripts/launchspt.sh'
