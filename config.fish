@@ -60,3 +60,6 @@ alias termclock='watch -n1 "date '+%D%n%T' | figlet -k"'
 
 #spotify
 alias spt='sh ~/scripts/launchspt.sh'
+
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
