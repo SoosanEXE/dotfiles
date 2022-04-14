@@ -74,6 +74,7 @@
         Plug 'greyblake/vim-preview'
         Plug 'romgrk/doom-one.vim'
         Plug 'dracula/vim', { 'as': 'dracula' }
+        Plug 'arcticicestudio/nord-vim'
     call plug#end()
 "}}}
 "NERD TREE CONFIG {{{
@@ -123,7 +124,7 @@
 "}}}
 "THEME AND AIRLINE{{{
     set background=dark
-    colorscheme dracula
+    colorscheme nord
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'default'
     let g:airline_exclude_preview = 1
@@ -156,6 +157,7 @@
     "<leader>bb to open buffers and search for them
     nnoremap <silent><leader>bb :Buffers<CR>
     nnoremap <silent><leader>bw :Windows<CR>
+    nnoremap <silent><leader>bl :BLines<CR>
 "}}}
 "SPLITS AND TABS{{{
     set splitright splitbelow 
