@@ -2,6 +2,12 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+export EDITOR=/usr/bin/vim
+export FZF_DEFAULT_OPTS='
+    --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 # fish color settings
 set fish_color_normal brcyan
 set fish_color_autosuggestion '#7d7d7d'
@@ -14,14 +20,15 @@ alias zshconfig="vim ~/.zshrc"
 alias fishconfig="vim ~/.config/fish/config.fish"
 alias bashconfig='vim ~/.bashrc'
 alias alaconfig="vim ~/.config/alacritty/alacritty.yml"
+alias tmuxconf='v ~/.tmux.conf'
 alias v="vim"
+alias vi="vim"
 alias ls="lsd"
 alias cat="bat"
 alias :q="exit"
-alias v="vim"
-alias vi="vim"
-alias spotify="flatpak run com.spotify.Client"
-alias c="clear; figlet soosan -f slant | lolcat"
+alias :Q="exit"
+alias q="exit"
+alias c="clear"
 alias .1='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
@@ -35,7 +42,8 @@ alias gitpat='cat ~/dev/PAT/git.txt'
 alias dev='cd ~/dev/; v'
 alias devjava='cd ~/dev/java/; v'
 alias finddev='cd ~/dev/; vim (fzf -m)'
-alias tmuxconf='v ~/.tmux.conf'
+alias fe="ranger"
+
 
 
 # Pacman aliases
@@ -55,11 +63,9 @@ alias rm='rm -i'
 
 
 #shenanigans
-figlet -f slant soosan | lolcat
-alias termclock='watch -n1 "date '+%D%n%T' | figlet -k"'
-
-#spotify
-alias spt='sh ~/scripts/launchspt.sh'
+alias ttyc="tty-clock -c"
 
 export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
+
+#colorscript -e (shuf -n 1 ~/.config/shclrscrpt/mycolors.txt)
